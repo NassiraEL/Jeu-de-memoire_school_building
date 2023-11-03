@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(back4.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+
+.school {
+    position: relative;
+    width: 90%;
+    height: 7em;
+    border: 2px solid transparent;
+    left: 60px;
+}
+
+.roof1 {
+    width: 95%;
+    height: 0.3em;
+    position: absolute;
+    background: brown;
+    top: 2.1em;
+    left: 0.5em;
+    border: 5px solid #741a1a;
+    border-left: none;
+    border-right: none;
+    padding: 0.1em;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.home {
+    width: 95%;
+    height: 4.5em;
+    position: absolute;
+    background: #e8bd85;
+    bottom: 0.05em;
+    left: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partie {
+    padding: 0.1em 0.1em;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-template-rows: repeat(4, 0fr);
+    gap: 4px;
+    border-left: 8px solid #8e550b63;
+    border-right: 8px solid #8e550b63;
+    border-top: 5px solid #8e550b63;
+    border-bottom: none;
+}
+
+.win {
+    position: relative;
+    width: 1em; 
+    height: 1em;
+    border: 1px solid brown;
+}
+
+.win img{
+    position: absolute;
+    width: 50%; 
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+img.height{
+    width: 5em; 
+    height: 5em;
+}
+
+.win::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(#8bcfea, #49a4c6 10%, #4b98b7 10%);
+    border-bottom: brown solid 2px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+    transition: height 0.9s ;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.win.height::before {
+    height: 0; 
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+}
+
+.win.rideau::before {
+    height: 1%;
+}
+
+.win.height {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background-color: #e8bd85; 
+    background-size: 35%;
+}
+
+
+
+.roof2{
+    position: absolute;
+    left: 3.95em;
+    top: 0.4em;
+    width: 50%;
+    height: 2em;
+    background-color: brown;
+    clip-path: polygon( 80% 18%, 100% 100%, 0% 100%, 20% 18%);
+    border: 3px solid #741a1a;
+      
+}
+
+.roofshadow{
+    position: absolute;
+    left: 3.9em;
+    top: -0.85em;
+    width: 50%;
+    height: 3.2em;
+    background-color: #741a1a4e;
+    clip-path: polygon(20% 100%, 45% 50%, 55% 50%, 80% 100%);
+     
+}
+
+/*middelHome css*/
+
+.middelHome{
+    width: 35%;
+    height: 4.5em;
+    position: absolute;
+    background: #ddbb8d;
+    bottom: 0.05em;
+    left: 5.1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.win2 {
+    width: 1em; 
+    height: 1em;
+    background-color: #8bcfea;
+    border: 5px solid #741a1a;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    margin-top: 0.3em;
+    position: relative;
+}
+
+.win2::before{
+    content: "";
+    position: absolute;
+    left:45%;
+    width: 0.1em;
+    height: 0.9em;
+    background-color: #741a1a;
+}
+
+.win2::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    width: 0.9em;
+    height: 0.08em;
+    background-color: #741a1a;
+}
+
+.partie2 {
+    padding: 0.1em 0.1em;
+    margin-top: 1.2em;
+    position: relative;
+}
+
+.wall{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.5em;
+    background-color: #89530dc8;
+}
+.threeHome{
+    position: absolute;
+    left: 41%;
+    width: 3em;
+    height: 100%;
+    background-color: bisque;
+    clip-path: polygon(50% 15%, 100% 38%, 100% 100%, 0% 100%, 0% 38%);
+}
+
+.threeHome::before{
+    content: "";
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 0.09em;
+    background-color: grey;
+    
+}
+.threeHome::after{
+    content: "";
+    position: absolute;
+    bottom:0.09em;
+    left: 0.1em;
+    width: 95%;
+    height: 0.09em;
+    background-color: grey;
+    border-bottom: 2px solid rgb(108, 106, 106);
+    
+}
+
+.roof3{
+    position: absolute;
+    top: 1.5em;
+    left: 7.2em;
+    width: 2.7em;
+    height: 0.4em;
+    background-color: brown;
+    border-top: 3px solid #741a1a;
+    transform: rotate(45deg);
+}
+
+.roof33{
+    position: absolute;
+    top: 1.48em;
+    left: 5.6em;
+    width: 2.66em;
+    height: 0.4em;
+    background-color: brown;
+    border-top: 3px solid #741a1a;
+    border-right: 3px solid #741a1a;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.titel{
+    position: absolute;
+    top: 2em;
+    left: 6.73em;
+    color: #741a1a;
+    z-index: 1;
+}
+
+.titel h3{
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
+}
+
+.partie3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.win3{
+    position: absolute;
+    top: 3em;
+    width: 0.3em;
+    height: 1.9em;
+    margin-left: 0.1em;
+}
+
+.win33{
+    width: 90%;
+    height: 0.5em;
+    background-color: #8bcfea;
+    border: 1px solid #741a1a;
+}
+
+.win5{
+    position: absolute;
+    top: 3em;
+    right: 0em;
+    width: 0.3em;
+    height: 1.9em;
+    margin-right: 0.1em;
+}
+
+.win4{
+    position: absolute;
+    top: 3.25em;
+    left: 0.48em;
+    width: 5em;
+    height: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+
+}
+.win44{
+    width: 0.65em;
+    height: 0.35em;
+    background-color: #8bcfea;
+    border: 1px solid #741a1a;
+}
+
+.partie4{
+    position: absolute;
+    bottom: 0.2em;
+    left: 0.7em;
+    width: 50%;
+    height: 1.8em;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #741a1a;
+    border-bottom: none;
+    background-color: #8bcfea;
+}
+
+.win6{
+    width: 20%;
+    height: 0.5em;
+    position: absolute;
+    left: 0em;
+}
+
+.partie4::before{
+    content: "";
+    position: absolute;
+    bottom: 0em;
+    left: 0.7em;
+    width: 0.05em;
+    height: 1.8em;
+    background-color: #741a1a;
+}
+
+.partie4::after{
+    content: "";
+    position: absolute;
+    top: 0.8em;
+    left: 0.62em;
+    width: 0.15em;
+    height: 0.2em;
+    border: 3px solid #741a1a;
+    border-radius: 20%;
+}
+
+.win66{
+    width: 100%;
+    height: 0.6em;
+    background-color: #8bcfea;
+    border: 2px solid #741a1a;
+    border-top: none;
+}
+
+.win7{
+    width: 20%;
+    height: 0.5em;
+    position: absolute;
+    right: 0em;
+}
+
+
+@media (max-width:800px){
+    body{
+        font-size: 50px;
+    }
+}
