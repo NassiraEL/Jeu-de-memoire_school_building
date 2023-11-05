@@ -20,18 +20,19 @@ body {
 }
 
 .roof1 {
-    width: 95%;
+    width: 100%;
     height: 0.3em;
     position: absolute;
     background: brown;
-    top: 2.1em;
-    left: 0.5em;
+    top: -0.3em;
+    left: 0em;
     border: 5px solid #741a1a;
     border-left: none;
     border-right: none;
     padding: 0.1em;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
+    z-index: 1;
 }
 
 .home {
@@ -120,20 +121,21 @@ img.height{
 
 .roof2{
     position: absolute;
-    left: 3.95em;
-    top: 0.4em;
+    left: 3.5em;
+    top: -2em;
     width: 50%;
     height: 2em;
     background-color: brown;
     clip-path: polygon( 80% 18%, 100% 100%, 0% 100%, 20% 18%);
     border: 3px solid #741a1a;
+    z-index: 2;
       
 }
 
 .roofshadow{
     position: absolute;
-    left: 3.9em;
-    top: -0.85em;
+    left: 3.6em;
+    top: -3.2em;
     width: 50%;
     height: 3.2em;
     background-color: #741a1a4e;
@@ -144,12 +146,13 @@ img.height{
 /*middelHome css*/
 
 .middelHome{
-    width: 35%;
+    width: 38%;
     height: 4.5em;
     position: absolute;
     background: #ddbb8d;
     bottom: 0.05em;
-    left: 5.1em;
+    left: 4.5em;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -198,11 +201,13 @@ img.height{
 }
 .threeHome{
     position: absolute;
-    left: 41%;
+    left: 40%;
+    bottom: 0;
     width: 3em;
-    height: 100%;
+    height: 7em;
     background-color: bisque;
     clip-path: polygon(50% 15%, 100% 38%, 100% 100%, 0% 100%, 0% 38%);
+    z-index: 3;
 }
 
 .threeHome::before{
@@ -250,17 +255,25 @@ img.height{
     z-index: 1;
 }
 
+.triangleRoof{
+    position: absolute;
+    z-index: 4;
+    top: -2.5em;
+    left: -0.43em;
+}
+
 .titel{
     position: absolute;
-    top: 2em;
-    left: 6.73em;
+    top: -0.35em;
+    left: 6.3em;
     color: #741a1a;
-    z-index: 1;
+    z-index: 5;
 }
 
 .titel h3{
     font-size: 0.6em;
     letter-spacing: 0.1em;
+    text-shadow: 1px 1px 5px  brown;
 }
 
 .partie3{
@@ -366,8 +379,19 @@ img.height{
 }
 
 
-@media (max-width:800px){
-    body{
-        font-size: 50px;
+.watch{
+    position: absolute;
+    top: -1.2em;
+    left: 6.95em;
+    z-index: 3;
+}
+
+@media (max-width: 800px){
+    *{
+        font-size: 40px;
+    }
+    .home{
+        top: 8em;
     }
 }
+
